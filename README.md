@@ -12,7 +12,7 @@ That said, this was a fun experiment. And it does work! And I'm happy with the a
 ### Usage
 Below is a sample command showing all arguments. Arguments are optional, however you'll need to actually specify a source zip file and a destination to extract to.
 
-`java -jar BruteForceZipPassword.jar -min 3 -max 6 -characters "abcABC123!@#" -verbose -s "/Users/username/Desktop/secret.zip" -d "/Users/username/Desktop/Extracted"`
+`java -jar BruteForceZipPassword.jar -min 3 -max 6 -characters "abcABC123@#$" -s "/Users/username/Desktop/secret.zip" -d "/Users/username/Desktop/Extracted" -verbose`
 
 #### Arguments
 ```-min - the minimum length of the password to try
