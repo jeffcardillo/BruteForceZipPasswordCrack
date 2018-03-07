@@ -22,7 +22,7 @@ Below is a sample command showing all arguments. Arguments are optional, however
 
 `java -jar BruteForceZipPassword.jar -min 3 -max 6 -characters "abcABC123@#$" -s "/Users/username/Desktop/secret.zip" -d "/Users/username/Desktop/Extracted" -verbose`
 
-#### Arguments
+### Arguments
 ```-min - the minimum length of the password to try
 -max - the maximum length of password to try
 -characters - the possible characters and symbols in the password
@@ -32,6 +32,6 @@ Below is a sample command showing all arguments. Arguments are optional, however
 ```
 In the above command the program will create every possible combination of password using "abcABC123@#" and from 3 to 6 characters in length.
 
-#### Future
+### Future
 I lost a bit of steam since I discovered my password before completing this project. If I pick this project back up, I'd like to experiment with ForkJoin to parallelize the computations and reduce the overall time to solution.
 
