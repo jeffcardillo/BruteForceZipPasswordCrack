@@ -7,7 +7,14 @@ This tool allows you to specify the exact set of characters to use in password a
 
 Truth be told, this program is slow. Luckily, I remembered my password when finishing up the code for this. My password was 10 different characters with a length of 10. That is 10^10 (or 10 Billion) possibilities! Given the exact 10 characters and length, I estimate it'd take about 30 days to crack the password. Not knowing the exact characters to include means you'd have to specify many other characters and possibly a length range, greatly increasing the processing time!
 
-That said, this was a fun experiment. And it does work! And I'm happy with the algorithm I came up with to sequentially generate every possible password combination with a given set of parameters.
+That said, this was a fun experiment. And it does work! And I'm happy with the algorithm I came up with to sequentially generate every possible password combination with a given set of parameters. My approach basically just uses a counter and sets each character in the generated password from the counter value, like:
+
+```
+// cleverly set the value of each character in password based on the counter
+for (int i=0; i&lt;length; i++) {
+   password[i] = chars[(int)((count / (Math.pow(chars.length, i))) % chars.length)];
+}
+```
 
 ### Usage
 Below is a sample command showing all arguments. Arguments are optional, however you'll need to actually specify a source zip file and a destination to extract to.
@@ -24,4 +31,6 @@ Below is a sample command showing all arguments. Arguments are optional, however
 ```
 In the above command the program will create every possible combination of password using "abcABC123@#" and from 3 to 6 characters in length.
 
+#### Future
+I lost a bit of steam since I discovered my password before completing this project. If I pick this project back up, I'd like to experiment with ForkJoin to parallelize the computations and reduce the overall time to solution.
 
