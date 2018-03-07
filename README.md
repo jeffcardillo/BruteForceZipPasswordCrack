@@ -15,6 +15,7 @@ for (int i=0; i&lt;length; i++) {
    password[i] = chars[(int)((count / (Math.pow(chars.length, i))) % chars.length)];
 }
 ```
+Where length is the length of the password you are generating. The beauty of this is that it will work for just about any length password.
 
 ### Usage
 Below is a sample command showing all arguments. Arguments are optional, however you'll need to actually specify a source zip file and a destination to extract to.
